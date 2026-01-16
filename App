@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -265,7 +267,6 @@
         display: block;
     }
 
-    /* Modal Styles */
     .modal {
         display: none;
         position: fixed;
@@ -398,7 +399,6 @@
     </div>
 
     <div class="portfolio-grid">
-        <!-- Stocks Section -->
         <div class="section">
             <h2>
                 📈 Stocks (NSE/BSE)
@@ -412,7 +412,6 @@
             <div class="last-updated" id="stockLastUpdated"></div>
         </div>
 
-        <!-- Mutual Funds Section -->
         <div class="section">
             <h2>
                 📊 Mutual Funds
@@ -426,7 +425,6 @@
             <div class="last-updated" id="mfLastUpdated"></div>
         </div>
 
-        <!-- RD -->
         <div class="section">
             <h2>
                 🔄 Recurring Deposits
@@ -436,7 +434,6 @@
             <div id="rdList"></div>
         </div>
 
-        <!-- FD -->
         <div class="section">
             <h2>
                 🏦 Fixed Deposits
@@ -446,7 +443,6 @@
             <div id="fdList"></div>
         </div>
 
-        <!-- PPF -->
         <div class="section">
             <h2>
                 🏛️ PPF
@@ -456,7 +452,6 @@
             <div id="ppfList"></div>
         </div>
 
-        <!-- DIP Fund -->
         <div class="section">
             <h2>
                 💧 DIP Fund
@@ -466,7 +461,6 @@
             <div id="dipList"></div>
         </div>
 
-        <!-- Emergency Fund -->
         <div class="section">
             <h2>
                 🚨 Emergency Fund
@@ -476,7 +470,6 @@
             <div id="emergencyList"></div>
         </div>
 
-        <!-- Gold Scheme -->
         <div class="section">
             <h2>
                 🥇 Gold Scheme
@@ -486,7 +479,6 @@
             <div id="goldList"></div>
         </div>
 
-        <!-- Cash -->
         <div class="section">
             <h2>
                 💵 Cash Savings
@@ -497,16 +489,13 @@
         </div>
     </div>
 
-    <!-- Custom Categories -->
     <div id="customCategoriesContainer"></div>
 
-    <!-- Add Custom Category Button -->
     <button class="custom-btn" onclick="showAddCustomCategory()">
         ➕ Add New Custom Category
     </button>
 </div>
 
-<!-- Universal Modal -->
 <div id="formModal" class="modal">
     <div class="modal-content">
         <div class="modal-header">
@@ -595,9 +584,6 @@
         }
     }
 
-    // [Previous add/display functions remain the same - Stock, MF, RD, FD, PPF, DIP, Emergency, Gold, Cash, Custom]
-    // I'll include the complete working versions from the previous file
-    
     function showAddStock() {
         const form = `
             <div class="form-group">
@@ -1083,7 +1069,6 @@
         showToast('Item added!');
     }
 
-    // Calculate functions
     function calculateTotal() {
         let total = 0;
         
@@ -1314,7 +1299,6 @@
         });
     }
 
-    // Display functions for RD, FD, PPF, DIP, Emergency, Gold, Cash (same as before)
     function displayRDs() {
         const list = document.getElementById('rdList');
         let html = '';
@@ -1584,7 +1568,6 @@
         }
     }
 
-    // AUTO-REFRESH FUNCTIONS (Will work when hosted externally)
     async function refreshStockPrices() {
         if (portfolio.stocks.length === 0) {
             showToast('No stocks added yet!');
